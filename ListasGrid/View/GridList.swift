@@ -4,13 +4,15 @@
 //
 //  Created by Paul Jaime Felix Flores on 10/04/23.
 //
-import SwiftUI
 
+import SwiftUI
 import Foundation
 
 struct GridList: View {
    
-    //V-99,Paso 1.4 usamos el  @ObservedObject
+    /*V-99,Paso 1.4 usamos el  @ObservedObject
+    y mandamos a llamar el Modelo
+    que creamos anteriormente*/
     @ObservedObject var grid = ModeloColumnas()
   
     var body: some View {
@@ -25,6 +27,7 @@ struct GridList: View {
                     }
                 }
             }.navigationBarTitle("Grids")
+            
             //V-98,Paso 1.0 ponemos el toolbar
             .toolbar{
                 ToolbarItem{
@@ -32,7 +35,7 @@ struct GridList: View {
                     Menu("Opciones"){
                         Section{
                             Button("1 columna"){
-                              //Paso 1.6,Le mandamos nuestro de columnas a ejecutar y accedemos a la función que nos pedira el número de columnas.
+                              //Paso 1.6,Le mandamos a llamar a columnas para que se ejecute y accedemos a la función que nos pedira el número de columnas.
                                 grid.columnas(num: 1)
                             }
                             Button("2 columnas"){
@@ -45,14 +48,14 @@ struct GridList: View {
                             Button("4 columnas"){
                                 grid.columnas(num: 4)
                             }
-                            //Paso 1.9,removemos lo que hay en la memoria
+                            //Paso 2.2,removemos lo que hay en la memoria
                             Button("DESTRUIR UD"){
                                 UserDefaults.standard.removeObject(forKey: "numero")
                             }
-                        }
-                    }
-                }
-            }
+                        }//:Section
+                    }//:Menu
+                }//:ToolbarItem
+            } //:Toolbar
         }
     }
 }

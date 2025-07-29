@@ -11,8 +11,6 @@ import SwiftUI
 struct ListasGridApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            //Vid75,esta sera ahora la pagina principal
             GridList()
         }
     }
