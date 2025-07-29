@@ -30,7 +30,7 @@ en la memoria de la aplicación.Este no se borra cuando se detiene la aplicació
 La única manera de borrarlo es:
 - Uno que nosotros mismos tengamos un botón donde lo eliminemos o alguna acción que lo elimine.
 - Y la otra es eliminar la aplicación.
-- Es una manera de persistir un registro 
+- Es una manera de persistir un registro. 
 - User defaults funciona exactamente igual en UIkit y SwiftUI.
 
 
