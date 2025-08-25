@@ -75,8 +75,5 @@ let lista: [Modelo] = [
            emoji: "🗽",
            nombre: "Estatua de la Libertad",
            descripcion: "Estatua ubicada en Nuva York."),
-    
-    
-
 ]
 
